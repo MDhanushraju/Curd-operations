@@ -1,10 +1,11 @@
 
-import ReactDOM from "react-dom/client"
+import ReactDom from "react-dom/client"
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap-icons/css/bootstrap-icons.min.css";
-import App from "./App";
+
 import "./App.css"
+import APP from "./App";
+import App from "./App";
 let rootele = document.getElementById("root");
 
-let root = ReactDOM.createRoot(rootele);
+let root = ReactDom.createRoot(rootele);
 root.render(<App/>);

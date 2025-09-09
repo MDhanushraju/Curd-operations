@@ -2,11 +2,16 @@
     background: linear-gradient(45deg,rgb(39, 149, 218),black);
     color: white;
 }
-.bg-danger{
-      background: linear-gradient(45deg,rgb(66, 3, 3),rgb(43, 96, 3),rgb(90, 63, 6));
-    color: white;
-
+.bg-danger {
+  background: linear-gradient(
+    45deg,
+    rgb(189, 47, 47),
+    rgb(160, 191, 137),
+    rgb(138, 185, 234)
+  );
+  color: white;
 }
+
 .btn-danger{
     background: linear-gradient(45deg,rgb(189, 47, 47),rgb(63, 63, 63));
     color: white;
@@ -24,3 +29,20 @@
     color: white;
 }
 
+.cn{
+    background-color: aliceblue;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+      position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17, 17, 17,0.6);
+    z-index: 2;
+
+}

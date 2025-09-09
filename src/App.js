@@ -1,8 +1,12 @@
 import React from "react";
 
 import "./App.css";
-import RecipeApp from "./Project/Main"
-import Navbar from "./Project/Nav"
+import Nav from "./CollegeForms/Nav";
+import Counter from "./curd operation/counter";
+
+
+
+
 
 
 
@@ -12,8 +16,8 @@ function App(){
 
     return(
         <>
-        <Navbar/>
-     <RecipeApp/>
+   <Counter/>
+          
         </>
     )
 }
