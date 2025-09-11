@@ -1,10 +1,16 @@
+import { use, useEffect, useState } from "react"
 
-import React from 'react'
 
+  
 export default function Counter() {
+  
+   
+
   return (
-    <div>
-      
-    </div>
+    <>
+     <h3>Count:-{count}</h3>
+        <button onClick={handle}>+</button>
+    </>
   )
 }
+
