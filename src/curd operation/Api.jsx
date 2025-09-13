@@ -15,8 +15,19 @@ export async function DeleteApi(id) {
 export async function PostApi(data) {
   return await axios.post(url,data,{
     headers:{
-      'Content-Type':'application/json'
+      'Content-Type':'application/json',
+
 
     }
   })
 }
+
+export async function EditApi(id, data) {
+  return await axios.put(`${url}/${id}`, data, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+}
+
+

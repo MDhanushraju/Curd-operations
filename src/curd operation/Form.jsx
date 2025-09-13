@@ -2,29 +2,35 @@ import React, { useState } from 'react'
 
 function Form(props) {
     let [product,setProduct]=useState(props.data)
-    
+
+    let  changeform=(e)=>{
+    let {name,value} = e.target
+setProduct({...product,[name]:value})
+ 
+
+
+    }
+
+
   return (
     <>
     <div className='cn'>
       
       <form action="">
-        <div className="form-group mt-3">
-            <label htmlFor="">ID:-</label>
-            <input type="number" name="ID"  className='form-control' id=""  placeholder='Enter the name'/>
-        </div>
+       
         <div className="form-group mt-3">
             <label htmlFor="">Name:-</label>
-            <input type="text" name="name" className='form-control' id=""  placeholder='Enter the name'/>
+            <input type="text" name='name' onChange={changeform} value={product.name} className='form-control' id=""  placeholder='Enter the name'/>
         </div>
         <div className="form-group mt-3">
             <label htmlFor="">Price:-</label>
-            <input type="number" name="Price" className='form-control' id=""  placeholder='Enter the Price'/>
+            <input type="number" name="price" onChange={changeform} value={product.price} className='form-control' id=""  placeholder='Enter the Price'/>
         </div>
         <div className="form-group mt-3">
-            <label htmlFor="">Catagories:-</label>
+            <label htmlFor="" >Catagories:-</label>
 
-          <select  className='mt-3 form-control' id="" name="catagories">
-
+          <select  className='mt-3 form-control' name="category"  onChange={changeform} value={product.category} id=""  >
+ 
             <option value="-1">Select</option>
             <option value={"mobile"}>Mobile</option>
             <option value={"Laptop"}>Laptop</option>
@@ -34,6 +40,7 @@ function Form(props) {
        <div className='mt-3'> 
         <button className='btn btn-primary float-end ' onClick={(e)=>{
    e.preventDefault()
+   props.add(product)
         }}>send</button>
         <button className='btn btn-danger float-end '  onClick={(e)=>{
    e.preventDefault()
