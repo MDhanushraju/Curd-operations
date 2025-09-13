@@ -3,17 +3,19 @@ function Table(props) {
     <table className='table m-3 r'>
       <thead>
         <tr>
-          <th>Id</th>
+       
           <th>name</th>
           <th>price</th>
           <th>category</th>
+          <th>Edit</th>
+          <th>Delete</th>
          
         </tr>
       </thead>
       <tbody>
         {
          props.products.map((item)=>(<tr key={item.id}>
-            <td>{item.id}</td>
+           
             <td>{item.name}</td>
             <td>{item.price}</td>
             <td>{item.category}</td>

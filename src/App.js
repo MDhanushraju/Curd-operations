@@ -75,7 +75,7 @@ let editProduct= (data)=>{
    
   <div className='wrapper text-center'> 
      <h3>CRUD Operation</h3>
-   <button onClick={()=>{
+   <button className='btn btn-success' onClick={()=>{
     setForm(!form)
    }}>Add Products</button>
    <Table products={products} showForm={showForm} edit={editProduct} Delete={Delete}></Table>
